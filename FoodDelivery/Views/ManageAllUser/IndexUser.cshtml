@@ -1,0 +1,39 @@
+﻿@model IEnumerable<SignUpUserVM>
+@{
+    ViewData["Title"] = "Index";
+    int counter = 1;
+}
+
+<div class="card">
+    <div class="card-body">
+            <div class="card-title">
+                All User
+            </div>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone Number</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <th scope="row">@counter</th>
+                        <td>@item.FirstName</td>
+                        <td>@item.LastName</td>
+                        <td>@item.Email</td>
+                        <td>@item.PhoneNumber</td>
+                    </tr>
+                    counter++;
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

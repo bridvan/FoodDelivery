@@ -1,0 +1,44 @@
+﻿
+@model OtherLocationVM
+@{
+    ViewData["Title"] = "List";
+    Layout = "~/Views/Shared/_LayoutPublic.cshtml";
+   
+
+}
+<div class="container mt-3 mb-4">
+    <div class="col-12">
+        <div class="custom_css_for_form vander_form">
+            <h3 class="text-center mb-5">Partner with grubNow</h3>
+            <form asp-controller="Restaurant" asp-action="Addlocation" method="post">
+                <div class="form-row ">
+                    <div class="col">
+                        <label>First Name</label>
+                        <input type="text" asp-for="LocationName" class="form-control" placeholder="Location Name">
+                        <span asp-validation-for="LocationName" class="text-danger small text-uppercase"></span>
+                    </div>
+                    <div class="col">
+                        <label>Last Name</label>
+                        <input type="text" asp-for="LocationAddress" class="form-control" placeholder="Location Address">
+                        <span asp-validation-for="LocationAddress" class="text-danger small text-uppercase"></span>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="row mt-2">
+                    <div class="col-12">
+
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn">Submit</button>
+                        <a href="/Account/HandleSignUp" class="float-right" id="btnNext">Back</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

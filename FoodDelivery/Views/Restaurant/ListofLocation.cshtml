@@ -1,0 +1,64 @@
+﻿@model FoodDelivery.Models.OtherLocationVM
+@{
+    ViewData["Title"] = "Register Location";
+
+}
+<div class="card">
+    <div class="card-body">
+        <div class="card-title">
+            All Vendor
+        </div>
+        <form asp-controller="Restaurant" asp-action="Addlocation" method="post">
+            <div class="form-row ">
+                <div class="col">
+                    <label>Location Name</label>
+                    <input type="hidden" asp-for="VendorID" />
+                    <input type="text" asp-for="LocationName" class="form-control" placeholder="Location Name">
+                    <span asp-validation-for="LocationName" class="text-danger small text-uppercase"></span>
+                </div>
+                <div class="col">
+                    <label>Location Address</label>
+                    <input type="text" asp-for="LocationAddress" class="form-control" placeholder="Location Address">
+                    <span asp-validation-for="LocationAddress" class="text-danger small text-uppercase"></span>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="row mt-2">
+                <div class="col-12">
+
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-success">add location</button>                   
+                </div>
+            </div>
+        </form>
+        <br />
+        <br />  
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Location Name</th>
+                    <th scope="col">Location Address</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var item in Model.Lista)
+                {
+                    <tr>
+
+                        <td>@item.LocationName</td>
+                        <td>@item.LocationAddress</td>                       
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

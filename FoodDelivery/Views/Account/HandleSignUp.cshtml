@@ -1,0 +1,63 @@
+﻿@{
+    Layout = "_LayoutPublic";
+    ViewData["Title"] = "Sign Up";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div class="container mt-3">
+        <div class="col-12" id="PartialVies">
+            <div class="custom_css_for_form">
+                <h3>Sign up as </h3>
+                <form action="# mt-3">
+                    <p>
+                        <input type="radio" id="test1" value="Vendor" name="radio-group" checked>
+                        <label for="test1">Partner with grubNow (Restaurant/Supermarket/Independent Caterer)</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="test2" value="User" name="radio-group">
+                        <label for="test2">Customer</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="test3" value="Driver" name="radio-group">
+                        <label for="test3">Driver</label>
+                    </p>
+                    <div class="row border_div">
+                        <div class="col-12">
+                            <label class="check_box">
+                                <p>I confirm that I have read and agree to the Terms & Conditions</p>
+                                <input type="checkbox" id="CheckBoxConfirm">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="col-12">
+                            <a href="#" id="btnNext" class="isDisabled">Next</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(".header_text_div").addClass("d-none");
+        $('#CheckBoxConfirm').click(function () {
+            if ($(this).prop("checked") == true) {
+                $("#btnNext").removeClass("isDisabled");
+            }
+            else if ($(this).prop("checked") == false) {
+                $("#btnNext").addClass("isDisabled");
+
+            }
+        });
+
+
+
+
+
+
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,290 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+
+    <link href="~/css/bootstrap.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="~/css/hover.css" type="text/css" rel="stylesheet">
+    <script src="~/js/jquery-3.2.1.min.js"></script>
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/custom.js"></script>
+    <link href="~/css/style.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container-fluid p-0 back_color_main">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand logo" href="/Home/PublicSite">GrubNow</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars" style="color: #fff;"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active"></li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0 form_button">
+                        <button type="button" class="btn" id="btnLogin">LOG IN</button>
+                        <button class="btn" type="button" id="btnSignUp">SIGN UP</button>
+                    </form>
+                </div>
+            </nav>
+        </div>
+
+        <!--Header Belo Section-->
+        <div class="row p-0 m-0 header_text_div">
+            <div class="col-lg-3  p-0">
+                <img src="~/img/left.png" alt="">
+            </div>
+            <div class="col-lg-6 col-mad-12 col-12">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2>Your favorite foods delivered to your door</h2>
+                    </div>
+                    <div class="col-12">
+                        <p class="text-center">Enter your delivery address, browse menus from the best restaurants in your neighborhood, and order delivery from the places that are open now, near you. You want it? We get it.</p>
+                    </div>
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-lg-2"></div>
+                            <div class="col-lg-8">
+                                <div class="col-auto form_location">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fas fa-map-marker-alt"></i></div>
+                                        </div>
+                                        <input type="text" class="form-control input_dr" id="inlineFormInputGroup" placeholder="Enter your address...">
+
+                                        <div class="input-group-prepend sub_button">
+                                            <div class="input-group-text"><a href="#"><i class="fas fa-chevron-right"></i></a></div>
+                                        </div>
+                                        <a href="#" class="current_location"><i class="fa fa-location-arrow"></i> Use Current Location</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3  p-0">
+                <img src="~/img/right.png" alt="">
+            </div>
+        </div>
+    </div>
+    @RenderBody()
+
+    <!-- ======= footer ======================== -->
+    <!-- Footer -->
+<footer class="page-footer font-small indigo footer_main">
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+        <div class="row">
+            <div class="col-md-2 mx-auto">
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-2">grubNow</h5>
+            </div>
+            <hr class="clearfix w-100 d-md-none">
+            <div class="col-md-3 mx-auto">
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-2 css-1w4k9rf ">grubNow</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#!" class="css-kbnj0e">About</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="css-kbnj0e">Careers</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="css-kbnj0e">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="css-kbnj0e">Press & Media</a>
+                    </li>
+
+                    <li>
+                        <a href="#!" class="css-kbnj0e">Developers</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="css-kbnj0e">API Docs</a>
+                    </li>
+
+                    <li>
+                        <a href="#!" class="css-kbnj0e">Civic Labs</a>
+                    </li>
+
+                    <li>
+                        <a href="#!" class="css-kbnj0e">Unlimited</a>
+                    </li>
+
+                    <li>
+                        <a href="#!" class="css-kbnj0e">Gift Cards</a>
+                    </li>
+
+                    <li>
+                        <a href="#!" class="css-kbnj0e">Pickup</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="css-kbnj0e">Postmates Party</a>
+                    </li>
+
+                </ul>
+            </div>
+            <hr class="clearfix w-100 d-md-none">
+            <div class="col-md-2 mx-auto">
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-2 css-1w4k9rf">
+                    MERCHANTS
+                </h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#!" class="css-kbnj0e">Sell on grubNow</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="css-kbnj0e">Restaurants</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="css-kbnj1e"><b>FLEET</b></a>
+                    </li>
+                    <li>
+                        <a href="#!" class="css-kbnj0e">Join the Fleet</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="css-kbnj1e"><b>SUPPORT</b></a>
+                    </li>
+                    <li>
+                        <a href="#!" class="css-kbnj0e"> Customer Help</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="css-kbnj0e">Fleet Help</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="css-kbnj0e">Merchant Help</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="clearfix w-100 d-md-none">
+            <div class="col-md-2 mx-auto">
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-2 css-1w4k9rf">MORE</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="/Home/DeliveryNearByMe" class="css-kbnj0e">Delivery Near Me</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="css-kbnj0e">Takeout Near Me</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="css-kbnj0e">Pizza Near Me</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="css-kbnj0e">Thai Near Me!</a>
+                    </li>
+
+                    <li>
+                        <a href="#!" class="css-kbnj0e">Mexican Near Me</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="css-kbnj0e">Alcohol Delivery</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="css-kbnj0e">FoodFight!</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="clearfix w-100 d-md-none">
+            <div class="col-md-2 mx-auto">
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-2 css-1w4k9rf">FOLLOW US</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#!" class="css-kbnj0e">Twitter</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="css-kbnj0e">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="css-kbnj0e">Instagram</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="css-kbnj0e">Snapchat</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======= body section 1 ========= -->
+    <div class="container delivery_location">
+        <div class="row border-top pb-4">
+            <div class="col-12 pt-4 css-1w4k9rf">
+                <h3>Our TOP CITIES</h3>
+            </div>
+        </div>
+        @await Component.InvokeAsync("AreaList")
+        <div class="row border-top mt-5 pt-4">
+
+        </div>
+    </div>
+    <div class="container css-j26i3k e15vi8s013">
+        <h3 class="css-bgwxx">GrubNow is the largest, most reliable on-demand delivery and pickup platform.</h3>
+        <p class="css-3ktj7">Able to deliver anything from anywhere, GrubNow is the food delivery, grocery delivery, whatever-you-can-think-of delivery app to bring what you crave right to your door. Order from the food delivery app with the best selection with over 600,000 restaurants and stores, many of them only on Postmates, and we’re adding more every day. Just enter your address, find something you like, add it to your cart and GrubNow it. <span class="css-1p9oane e15vi8s016"><span>Read Less</span></span></p>
+    </div>
+    <div class="container css-1aas96k e15vi8s03 mt-3">
+        <a href="#" data-event-category="Navigation" data-event-action="Footer" data-event-label="Home" class="css-116ols1 e15vi8s04">©2020 GrubNow Inc</a>
+    <a data-event-category="Navigation" data-event-action="Footer" data-event-label="Terms" class="css-odoev0 e15vi8s05" href="#"><span>Terms</span></a>
+    <a data-event-category="Navigation" data-event-action="Footer" data-event-label="Privacy" class="css-odoev0 e15vi8s05" href="#"><span>Privacy</span></a>
+    </div>
+
+    <div class="footer-copyright text-center py-3">
+        © 2020 Copyright:
+        <a href="https://mdbootstrap.com/"> By GrubNow</a>
+    </div>
+</footer>
+    <!-- ======= footer ======================== -->
+    <!-- ========== model login ============ -->
+    <div class="modal fade" id="GenericModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content border-0">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="CreateModal"></div>
+                <div class="modal-footer">
+                    @*<a class="btn btn-link text-danger" id="btnSignUp" href="/Account/SignUp">
+                            New user! Do not have an account yet.
+                        </a>*@
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ========== model login ============ -->
+
+    <script>
+        $(document).ready(function () {
+            $(".input_dr").on("focus", function () {
+                $(".current_location").show();
+            });
+
+
+            $(".input_dr1").on("focus", function () {
+                $(".current_location1").show();
+            });
+
+        });
+
+
+    </script>
+
+
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+
+

@@ -1,0 +1,117 @@
+﻿@model SignInViewModel
+@{
+    Layout = null;
+}
+<div class="row">
+    <div class="col-md-10 offset-1">
+        <form asp-area="" asp-controller="Account" id="FormCreate" asp-action="SignIn" method="post">
+            @Html.AntiForgeryToken()
+            <div asp-validation-summary="ModelOnly" class="text-danger" style="margin:30px"></div>
+            <div class="form-group">
+                <label asp-for="UserName" class="col-form-label">Enter Email</label>
+                <input asp-for="UserName" type="email" class="form-control" placeholder="Email" />
+                <span asp-validation-for="UserName" class="text-danger small"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="col-form-label">Password</label>
+                <input asp-for="Password" type="password" class="form-control" placeholder="Password" />
+                <span asp-validation-for="Password" class="text-danger small"></span>
+            </div>
+            <div>
+                <label class="check_box">
+                    <p>Remenber Me</p>
+                    <input type="checkbox" asp-for="RememberMe" id="CheckBoxConfirm">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success" type="submit">
+                    Login In
+                </button>
+                <br>
+                <div class="form-group">
+                    @*<a class="btn btn-link text-center text-danger" id="btnforget" href="/Account/ResetPasswordLink">
+                    Forget Your Password.
+                </a>*@
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@* Populate All Partial View Models Here *@
+<div class="modal" id="CreateModal">
+
+</div>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+<script>
+        $("#FormCreate").on("submit", function (e) {
+            e.preventDefault();
+            var frm = $(this);
+            debugger
+            $.ajax({
+                url: frm.attr('action'),
+                type: frm.attr('method'),
+                data: frm.serialize(),
+                success: function (response) {
+                    if (response.status == true) {
+                        window.location.href = '/Home/Index';
+                    } else {
+                        console.warn(response.message);
+                    }
+                },
+                error: function () {
+
+                }
+            });
+
+        });
+
+
+        //--------------------------------------------------------
+        //forget Model
+        $("#btnforget").on("click", function (e) {
+            e.preventDefault();
+            var btn = $(this);
+            $.ajax({
+                url: btn.attr('href'),
+                type: 'GET',
+                success: function (response) {
+                    $("#CreateModal").html(response);
+                    $("#CreateModal").modal('show');
+                },
+                error: function () {
+                }
+            });
+        });
+
+
+
+
+
+
+        ////--------------------------------------------------------
+        ////SignUp  Model
+        //$("#btnSignUp").on("click", function (e) {
+        //    debugger
+        //    e.preventDefault();
+        //    var btn = $(this);
+        //    $.ajax({
+        //        url: btn.attr('href'),
+        //        type: 'GET',
+        //        success: function (response) {
+        //            $("#CreateModal").html(response);
+        //            $("#CreateModal").modal('show');
+        //        },
+        //        error: function () {
+        //        }
+        //    });
+        //});
+</script>
+
+
+
